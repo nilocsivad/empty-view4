@@ -4,9 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private TextView tvContactInfo, tvCleanContact;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,9 +18,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
+
+
+
+
     private void initComponents() {
-        TextView cleanTV = (TextView) this.findViewById(R.id.btn_clean_contact);
-        cleanTV.setOnClickListener(this);
+        tvContactInfo = (TextView)this.findViewById(R.id.tv_contact_info);
+
+        tvCleanContact = (TextView) this.findViewById(R.id.tv_clean_contact);
+        tvCleanContact.setOnClickListener(this);
     }
 
     /**
@@ -30,8 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.btn_clean_contact:
-                Toast.makeText(this, "" + System.currentTimeMillis(), Toast.LENGTH_LONG).show();
+            case R.id.tv_clean_contact:
                 break;
         }
     }

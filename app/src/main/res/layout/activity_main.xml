@@ -21,11 +21,10 @@
             android:background="@color/split_line" />
 
         <TextView
+            android:id="@+id/tv_contact_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="@dimen/list_item_padding_top"
-            android:paddingTop="@dimen/list_item_padding_bottom"
-            android:text="@string/nul" />
+            android:text="@string/app_name" />
 
         <TextView
             android:layout_width="match_parent"
@@ -40,11 +39,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/btn_clean_contact"
+            android:id="@+id/tv_clean_contact"
             android:layout_width="@dimen/round_button_size"
             android:layout_height="@dimen/round_button_size"
             android:layout_centerInParent="true"
-            android:background="@drawable/shape_round_button"
+            android:background="@drawable/round_btn"
             android:gravity="center"
             android:text="@string/txt_button_clean_contact"
             android:textColor="@color/txt_white"
